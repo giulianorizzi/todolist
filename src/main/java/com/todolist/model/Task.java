@@ -2,9 +2,14 @@ package com.todolist.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Task {
@@ -17,6 +22,11 @@ public class Task {
 	
 	@Column
 	private Boolean status;
+	
+	@JsonBackReference
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_folder")
+	private Folder folder;
 	
 	
 	// Getters y Setters
@@ -44,4 +54,11 @@ public class Task {
 		this.status = status;
 	}
 	
+	public Folder getFolder() {
+		return folder;
+	}
+
+	public void setFolder(Folder folder) {
+		this.folder = folder;
+	}
 }
