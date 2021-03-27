@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+        <title>ToDo List</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body class="bg-secondary">
+
+        <div class="container mt-4 p-4 bg-light">
+            <div id="task-container" class="d-none">
+                <div class="h2"><a href="./">Folders</a> > <span id="folder-name"></span></div>
+                <hr>
+                <div id="tasks"> </div>
+                <hr>
+                <form>
+                    <div class="form-group d-flex justify-content-between">
+                        <input type="text" id="inpTaskName" class="form-control" placeholder="New Task">
+                        <button type="button" id="btnAddTask" class="btn btn-success ml-2">Add</button>
+                    </div>
+                </form>
+                <div class="alert alert-danger d-none" id="errorTask" role="alert"> </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalEditarTarea" tabindex="-1" role="dialog" aria-labelledby="modalEditarTareaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditarTareaLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" id="inpTaskNameEdit" class="form-control" placeholder="Task Name">
+                        </div>
+                        <div class="alert alert-danger d-none" id="errorTaskEdit" role="alert"> </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="btnSaveTask">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <script src="./assets/js/utilities.js"></script>
+        <script src="./assets/js/task.js"></script>
+        <script src="./assets/js/validations.js"></script>
+    </body>
+</html>
