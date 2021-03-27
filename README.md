@@ -3,6 +3,10 @@
 * SpringBoot version: 2.4.4
 * JAVA version: 11
 * MySQL version: 8.0
+
+# STEPS
+* Open the configuration bash and enter the MySQL user and Password 
+* Run the BackEnd and then the FrontEnd (index.html)
                                            
 # HEROKU                  
                                             
