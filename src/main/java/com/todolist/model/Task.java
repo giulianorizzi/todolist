@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 public class Task {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_task;
+	private Integer id_task;
 	
 	@Column
 	private String name;
@@ -30,11 +30,11 @@ public class Task {
 	
 	
 	// Getters y Setters
-	public int getId_task() {
+	public Integer getId_task() {
 		return id_task;
 	}
 
-	public void setId_task(int id_task) {
+	public void setId_task(Integer id_task) {
 		this.id_task = id_task;
 	}
 

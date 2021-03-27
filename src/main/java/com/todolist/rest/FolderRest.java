@@ -1,8 +1,10 @@
 package com.todolist.rest;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +18,7 @@ import com.todolist.dao.FolderDAO;
 import com.todolist.model.Folder;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("folders")
 public class FolderRest {
 	
@@ -30,6 +33,11 @@ public class FolderRest {
 	@GetMapping("/listar")
 	public List <Folder> listar() {
 		return folderDAO.findAll();
+	}
+	
+	@GetMapping("/listar/{id}")
+	public Optional<Folder> listarID(@PathVariable("id") int id_folder) {
+		return folderDAO.findById(id_folder);
 	}
 	
 	@DeleteMapping("/eliminar/{id}")

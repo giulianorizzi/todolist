@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Folder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_folder;
+	private Integer id_folder;
 	
 	@Column
 	private String name;
@@ -24,15 +24,16 @@ public class Folder {
 	@JsonManagedReference
 	@OneToMany(
 			mappedBy = "folder",
-			cascade = CascadeType.ALL
+			cascade = CascadeType.ALL,
+			orphanRemoval = true
 	)
 	private List<Task> tasks;
 
-	public int getId_folder() {
+	public Integer getId_folder() {
 		return id_folder;
 	}
 
-	public void setId_folder(int id_folder) {
+	public void setId_folder(Integer id_folder) {
 		this.id_folder = id_folder;
 	}
 
