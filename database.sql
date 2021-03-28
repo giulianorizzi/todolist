@@ -37,7 +37,7 @@ CREATE TABLE `folder` (
 
 LOCK TABLES `folder` WRITE;
 /*!40000 ALTER TABLE `folder` DISABLE KEYS */;
-INSERT INTO `folder` VALUES (1,'Prueba'),(2,'dsxxx');
+INSERT INTO `folder` VALUES (1,'Prueba');
 /*!40000 ALTER TABLE `folder` ENABLE KEYS */;
 UNLOCK TABLES;
 
