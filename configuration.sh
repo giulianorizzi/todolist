@@ -4,6 +4,7 @@ function pause(){
 	read -p "$*"
 }
 
+
 # Ask the user for login details
 echo ------------------------------------------------------
 echo ----- Bash to create the MySQL database 'TodoList' -----
@@ -12,8 +13,8 @@ echo
 read -p 'MySQL User: ' uservar
 read -sp 'MySQL Password: ' passvar
 echo
-mysql -u$uservar -p$passvar -e "create database if not exists todolist;"
-echo
+mysql -u$uservar -p$passvar < "`dirname "$0"`\database.sql"
+echo $
 echo Database created succesfully
 echo
 pause 'Press [Enter] key to continue...'
@@ -35,5 +36,8 @@ echo SpringBoot configuration succesfully
 echo
 pause 'Press [Enter] key to continue...'
 
-echo
-pause 'All is configured. Please run the backend and then open the frontend.'
+cd `dirname "$0"`/backend
+
+mvn clean package
+
+java -jar `dirname "$0"`/backend/target/todolist-0.0.1-SNAPSHOT.jar
