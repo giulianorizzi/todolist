@@ -13,11 +13,15 @@ echo
 read -p 'MySQL User: ' uservar
 read -sp 'MySQL Password: ' passvar
 echo
-mysql -u$uservar -p$passvar < "`dirname "$0"`\database.sql"
-echo $
-echo Database created succesfully
-echo
-pause 'Press [Enter] key to continue...'
+resultado=$(mysql -u$uservar -p$passvar < "`dirname "$0"`\database.sql")
+if [ $? -eq 0 ];then
+	echo
+    pause 'Database created succesfully. Press [Enter] to configure SpringBoot: '
+else
+	echo
+    pause 'Database connection error. Press [Enter] to exit: '
+	exit 0
+fi
 
 FILE="`dirname "$0"`\backend\src\main\resources\application.properties"
 
@@ -32,12 +36,13 @@ spring.datasource.password=$passvar
 EOM
 
 echo
-echo SpringBoot configuration succesfully
-echo
-pause 'Press [Enter] key to continue...'
+pause 'SpringBoot configuration succesfully. Press [Enter] to compile the project: '
 
 cd `dirname "$0"`/backend
 
 mvn clean package
+
+echo
+pause 'Project compiled. Press [Enter] to start the server. Then you can open the FrontEnd: '
 
 java -jar `dirname "$0"`/backend/target/todolist-0.0.1-SNAPSHOT.jar
