@@ -1,12 +1,13 @@
 # REQUERIMENTS 📋
 
-* **SpringBoot** version: 2.4.4
+* **Spring Boot** version: 2.4.4
 * **JAVA** version: 11
 * **MySQL** version: 8.0
+* **Apache Maven** version: 3.6.3
 
 # STEPS 🔧
-* Open the configuration bash and enter the MySQL user and Password 
-* Run the BackEnd and then the FrontEnd (index.html)
+* Open the configuration bash and enter the MySQL user and Password. This will set the backend.
+* Open the the FrontEnd (index.html file).
                                            
 # HEROKU 🚀                 
                                             
