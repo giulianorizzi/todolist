@@ -1,35 +1,43 @@
-# REQUERIMENTS
+# REQUERIMENTS 📋
 
-* SpringBoot version: 2.4.4
-* JAVA version: 11
-* MySQL version: 8.0
+* **SpringBoot** version: 2.4.4
+* **JAVA** version: 11
+* **MySQL** version: 8.0
 
-# STEPS
+# STEPS 🔧
 * Open the configuration bash and enter the MySQL user and Password 
 * Run the BackEnd and then the FrontEnd (index.html)
                                            
-# HEROKU                  
+# HEROKU 🚀                 
                                             
 ### LIVE running version
-URL https://todolist-ensolvers-frontend.herokuapp.com/
+**URL** 
+https://todolist-ensolvers-frontend.herokuapp.com/
+
+_The first time you open the page it might be delayed a bit because the frontend and the backend are two different apps_
 
 ### API REST 
 
-URL
+**URL**
 https://todolist-ensolvers.herokuapp.com/
 
 Endpoints
-* Listar carpetas
+* List folders
 https://todolist-ensolvers.herokuapp.com/folders/listar
-* Insertar carpeta
+* Insert folders
 https://todolist-ensolvers.herokuapp.com/folders/insertar
-* Eliminar carpeta
+* Delete folders
 https://todolist-ensolvers.herokuapp.com/folders/eliminar
-* Listar tareas
+* List tasks
 https://todolist-ensolvers.herokuapp.com/tasks/listar
-* Insertar tarea
+* Insert tasks
 https://todolist-ensolvers.herokuapp.com/tasks/insertar
-* Actualizar tarea
+* Update tasks
 https://todolist-ensolvers.herokuapp.com/tasks/actualizar
-* Eliminar tarea
+* Delete tasks
 https://todolist-ensolvers.herokuapp.com/tasks/eliminar
+
+
+
+---
+Giuliano Rizzi
